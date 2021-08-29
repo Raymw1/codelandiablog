@@ -1,0 +1,141 @@
+:root {
+  --blue: #3EA1DB;
+  --blue-dark: #574AE8;
+  --white: #FFF;
+  --title: #313131;
+  --text: #B6B6B6;
+  --linear: linear-gradient(90deg, #574AE8 0%, #3EA1DB 100%);
+}
+
+@font-face {
+  font-family: 'LexendDeca';
+  src: url('../fonts/LexendDeca-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ================= HEADER ================= */
+header {
+  background: var(--linear);
+  width: 100%;
+  padding: 42px 0;
+  color: #fff;
+  font-family: "LexendDeca", sans-serif;
+}
+
+.header-titles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 72px;
+}
+
+.header-titles h1, .header-titles h2 {
+  font-weight: normal;
+}
+
+.input {
+  width: 100%;
+  background-color: #ffffff33;
+  padding: 16px 22px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.input img {
+  width: 30px;
+  height: 30px;
+  margin-right: 16px;
+}
+
+.input input {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  outline: none;
+}
+
+.input input::placeholder {
+  color: #fff;
+}
+
+/* ================= MAIN ================= */
+main {
+  background-color: #e5e5e5;
+  padding: 100px 0;
+}
+
+.cards {
+  display: grid;
+  gap: 50px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px 24px 24px;
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.like {
+  cursor: pointer;
+  transition: transform 400ms;
+}
+
+.like:hover {
+  transform: translateY(-2px);
+}
+
+.card-content h3 {
+  font-family: "LexendDeca", sans-serif;
+  font-weight: normal;
+  font-size: 26px;
+  color: var(--title);
+  margin-bottom: 8px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.card-content h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: all 400ms ease-in-out;
+  background-color: var(--title);
+}
+
+.card-content h3:hover::after {
+  width: 100%;
+}
+
+
+.card-content p, .card-head small {
+  font-family: "LexendDeca", sans-serif;
+  color: var(--text);
+  line-height: 32px;
+}
